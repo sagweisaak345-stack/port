@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Isaak Sagwe — IT Support Specialist & Web Developer</title>
+  <meta name="description" content="Results-driven IT Support Specialist with 2+ years of experience in networking, Microsoft 365 administration, and web development. 98% first-contact resolution rate. Based in Nairobi, Kenya." />
+  <meta name="theme-color" content="#05060a" />
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Isaak Sagwe — IT Support Specialist & Web Developer" />
+  <meta property="og:description" content="Results-driven IT Support Specialist with 2+ years of experience. 98% first-contact resolution rate and 99.9% network uptime." />
+  <meta property="og:image" content="https://example.com/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Isaak Sagwe — IT Support Specialist" />
+  <meta name="twitter:description" content="Results-driven IT Support Specialist with 2+ years of experience. 98% first-contact resolution rate and 99.9% network uptime." />
+
+  <!-- Inline SVG favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2305060a'/><circle cx='50' cy='50' r='20' fill='none' stroke='%235eead4' stroke-width='8'/><circle cx='50' cy='50' r='6' fill='%23a78bfa'/></svg>" />
+
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader-mark">
+      <span>Initialising scene</span>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="webgl-fallback" aria-hidden="true"></div>
+
+  <div class="page">
+
+    <header class="site-header" id="header">
+      <div class="header-inner">
+        <a class="brand" href="#hero"><span class="dot" aria-hidden="true"></span>isaak.dev</a>
+        <nav aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <section class="hero section" id="hero">
+        <p class="eyebrow">IT Support Specialist · Web Developer · Nairobi</p>
+        <h1>I keep critical systems running.<br /><span class="grad">And build tools that work.</span></h1>
+        <p>
+          Results-driven IT professional with 2+ years of hands-on experience providing first and second-line technical support in fast-paced environments. Proven ability to manage helpdesk tickets to SLA with a 98% first-contact resolution rate, while leveraging web development skills to automate and improve IT operations.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#projects">View my experience</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">Scroll</div>
+      </section>
+
+      <section class="section" id="about">
+        <p class="eyebrow" data-reveal>01 — About</p>
+        <h2 data-reveal>Reliable, proactive,<br />and technically sharp.</h2>
+        <div class="about-grid">
+          <div data-reveal>
+            <p>
+              I am an IT Support Specialist based in Nairobi with over two years of experience managing 
+              hardware, software, network, and connectivity issues for 50+ end-users. I have a proven 
+              track record of maintaining <strong>99.9% network uptime</strong> and zero SLA breaches 
+              across all client accounts.
+            </p>
+            <p>
+              Beyond traditional IT support, I specialize in <strong>Web Development</strong>. I use HTML, 
+              CSS, and JavaScript to build internal tools that streamline IT operations—such as automated 
+              ticketing dashboards and searchable documentation portals, which have reduced average 
+              resolution times by 50%.
+            </p>
+            <p>
+              I bring direct experience from <strong>aviation-adjacent IT operations</strong>, where I successfully 
+              reduced open-ticket backlogs by 15% and produced standard resolution guides that improved 
+              team response speeds by 20%. I am eager to bring this disciplined, high-performance support 
+              to a forward-thinking organization.
+            </p>
+          </div>
+          <aside class="panel" data-reveal aria-label="Quick facts">
+            <ul class="fact-list">
+              <li><span>Location</span><span>Nairobi, Kenya</span></li>
+              <li><span>Focus</span><span>IT Support & Web Dev</span></li>
+              <li><span>Experience</span><span>2+ Years</span></li>
+              <li><span>Availability</span><span>Open to Work</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <p class="eyebrow" data-reveal>02 — Experience & Projects</p>
+        <h2 data-reveal>Key achievements.</h2>
+        <p class="lead" data-reveal>
+          A look at my professional IT support experience, networking achievements, and web development work.
+        </p>
+
+        <div class="project-grid">
+          <button class="project-card" data-project="0" data-reveal>
+            <span class="num">01</span>
+            <h3>IT Support Specialist</h3>
+            <p>Managed 50+ end-users with a 98% first-contact resolution rate and zero SLA breaches over 2+ years.</p>
+            <ul class="tag-row">
+              <li>Helpdesk</li><li>SLA Management</li><li>Microsoft 365</li>
+            </ul>
+          </button>
+
+          <button class="project-card" data-project="1" data-reveal>
+            <span class="num">02</span>
+            <h3>Aviation IT Operations</h3>
+            <p>Resolved hardware and network issues in a fast-paced aviation environment, reducing backlog by 15%.</p>
+            <ul class="tag-row">
+              <li>Aviation IT</li><li>Hardware</li><li>Network Maintenance</li>
+            </ul>
+          </button>
+
+          <button class="project-card" data-project="2" data-reveal>
+            <span class="num">03</span>
+            <h3>SOP Documentation Portal</h3>
+            <p>Built a custom web portal to host 30+ SOPs and incident logs, cutting average resolution time by 50%.</p>
+            <ul class="tag-row">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+            </ul>
+          </button>
+
+          <button class="project-card" data-project="3" data-reveal>
+            <span class="num">04</span>
+            <h3>Network Infrastructure</h3>
+            <p>Configured LAN/Wi-Fi routers and switches, resolving DNS/DHCP issues to achieve 99.9% uptime.</p>
+            <ul class="tag-row">
+              <li>LAN/Wi-Fi</li><li>DNS/DHCP</li><li>TCP/IP</li>
+            </ul>
+          </button>
+        </div>
+
+        <p class="hint" data-reveal>
+          <span class="pulse" aria-hidden="true"></span>
+          Tip: Click a card to read the full details.
+        </p>
+      </section>
+
+      <section class="section" id="skills">
+        <p class="eyebrow" data-reveal>03 — Toolkit</p>
+        <h2 data-reveal>Technical proficiency.</h2>
+        <div class="skill-groups">
+          <div class="panel" data-reveal>
+            <h3>IT Operations</h3>
+            <ul class="chip-list">
+              <li>Helpdesk Ticketing</li><li>SLA Adherence</li><li>Documentation</li><li>Hardware Lifecycle</li>
+            </ul>
+          </div>
+          <div class="panel" data-reveal>
+            <h3>Networking</h3>
+            <ul class="chip-list">
+              <li>LAN/Wi-Fi</li><li>DNS/DHCP</li><li>TCP/IP</li><li>Routers & Switches</li><li>VPN</li>
+            </ul>
+          </div>
+          <div class="panel" data-reveal>
+            <h3>Systems & Cloud</h3>
+            <ul class="chip-list">
+              <li>Windows 10/11</li><li>Linux (CLI)</li><li>Microsoft 365</li><li>Google Workspace</li>
+            </ul>
+          </div>
+          <div class="panel" data-reveal>
+            <h3>Web Development</h3>
+            <ul class="chip-list">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Git/GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <p class="eyebrow" data-reveal>04 — Contact</p>
+        <h2 data-reveal>Let's work together.</h2>
+        <div class="contact-wrap">
+          <div data-reveal>
+            <p class="lead">
+              I'm currently open to IT Support, Operations, and Web Development opportunities. 
+              Drop me a message and I'll get back to you promptly.
+            </p>
+            <ul class="contact-links">
+              <li><a href="mailto:sagwesaak345@gmail.com">✉ sagwesaak345@gmail.com</a></li>
+              <li><a href="tel:+254702290192">☎ +254 702 290 192</a></li>
+              <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">⌘ github.com/isaaksagwe</a></li>
+            </ul>
+          </div>
+
+          <!-- REPLACE 'REPLACE_ME' WITH YOUR FORMSPREE ID -->
+          <form
+            class="panel"
+            id="contact-form"
+            action="https://formspree.io/f/REPLACE_ME"
+            method="POST"
+            novalidate
+            data-reveal
+          >
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" required></textarea>
+            </div>
+            <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year">2025</span> Isaak Sagwe</span>
+      <span>Built with vanilla JS + Three.js</span>
+    </footer>
+  </div>
+
+  <dialog id="project-dialog" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <p class="modal-kicker" id="modal-kicker">Project</p>
+      <button class="modal-close" type="button" data-close aria-label="Close dialog">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3 id="modal-title">Title</h3>
+      <div id="modal-content"></div>
+      <div class="modal-actions" id="modal-actions"></div>
+    </div>
+  </dialog>
+
+</body>
+</html>
