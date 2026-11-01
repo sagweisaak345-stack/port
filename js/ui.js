@@ -3,6 +3,15 @@
 import { PROJECTS } from './data.js';
 import { $, $$, escapeHtml, prefersReducedMotion } from './utils.js';
 
+/* ---------- Supabase settings ----------
+   Paste your Project URL and anon/publishable key from
+   Supabase → Project Settings → API.
+   Never put the service_role key here. */
+const SUPABASE_URL   = 'https://hnxwbwgpbyssmqkvmeop.supabase.co';
+const SUPABASE_KEY   = 'sb_publishable_rRsZg1dSvIB_ZTC1ZIJudA_HXK7SdH3';
+const SUPABASE_TABLE = 'submissions';
+const FALLBACK_EMAIL = 'sagwesaak345@gmail.com';
+
 let dialog, modalTitle, modalKicker, modalBody, modalActions;
 let lastFocused = null;
 
@@ -156,11 +165,17 @@ function initCardGlow() {
   });
 }
 
-/* ---------- contact form (Formspree) ---------- */
+/* ---------- contact form (Supabase) ---------- */
 function initContactForm() {
   const form   = $('#contact-form');
   const status = $('#form-status');
   if (!form || !status) return;
+
+  // The Supabase library is loaded by a <script> tag in index.html
+  // (it must come BEFORE the main.js script tag).
+  const db = window.supabase
+    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
+    : null;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -177,20 +192,24 @@ function initContactForm() {
     status.textContent = '';
     status.removeAttribute('data-state');
 
+    const data = new FormData(form);
+
     try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
+      if (!db) throw new Error('Supabase library did not load. Check the <script> tag in index.html.');
+
+      const { error } = await db.from(SUPABASE_TABLE).insert({
+        name:    data.get('name'),
+        email:   data.get('email'),
+        message: data.get('message')
       });
-      if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+      if (error) throw error;
 
       form.reset();
       status.textContent = "Thanks — your message is on its way. I'll reply soon.";
       status.dataset.state = 'ok';
     } catch (err) {
       console.error(err);
-      status.textContent = 'Something went wrong. Email me directly at hello@example.com.';
+      status.textContent = `Something went wrong. Email me directly at ${FALLBACK_EMAIL}.`;
       status.dataset.state = 'err';
     } finally {
       btn.disabled = false;
