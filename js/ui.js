@@ -209,7 +209,7 @@ function initContactForm() {
       status.dataset.state = 'ok';
     } catch (err) {
       console.error(err);
-      status.textContent = `Something went wrong. Email me directly at ${FALLBACK_EMAIL}.`;
+    status.textContent = `Error: ${err.message || err} (${err.code || 'no code'})`;
       status.dataset.state = 'err';
     } finally {
       btn.disabled = false;
