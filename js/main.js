@@ -30,3 +30,26 @@ if (!webglSupported()) {
       hideLoader();
     });
 }
+const supabaseUrl = "https://hnxwbwgpbyssmqkvmeop.supabase.co";
+const supabaseKey = "sb_publishable_rRsZg1dSvIB_ZTC1ZIJudA_HXK7SdH3";
+const db = supabase.createClient(supabaseUrl, supabaseKey);
+
+const form = document.querySelector("#contact-form"); // use your form's id
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const { error } = await db.from("submissions").insert({
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  });
+
+  if (error) {
+    alert("Something went wrong. Please try again.");
+    console.error(error);
+  } else {
+    alert("Sent! Thank you.");
+    form.reset();
+  }
+});
